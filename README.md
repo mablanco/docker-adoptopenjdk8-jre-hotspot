@@ -1,4 +1,4 @@
-# docker-adpotopenjdk8-hotspot
+# docker-adoptopenjdk8-hotspot
 
 Docker image for AdoptOpenJDK, a project that uses infrastructure, build y test scripts to produce prebuilt binaries from OpenJDK class libraries and a choice of either the OpenJDK HotSpot o Eclipse OpenJ9 VM (<https://adoptopenjdk.net/>).
 
