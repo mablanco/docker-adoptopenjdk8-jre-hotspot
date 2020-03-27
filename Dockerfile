@@ -11,7 +11,6 @@ RUN apt-get update && \
     mkdir -p /opt/jdk8u-jre && \
     tar -xf OpenJDK8U-jre_x64_linux_hotspot_8u$OPENJDK_VERSION$OPENJDK_SUBVERSION.tar.gz -C /opt/jdk8u-jre --strip-components 1 && \
     rm OpenJDK8U-jre_x64_linux_hotspot_8u$OPENJDK_VERSION$OPENJDK_SUBVERSION.tar.gz && \
-    apt-get -yq --purge remove wget && \
     apt-get -yq autoremove && \
     apt-get clean && \
     rm -rf /var/lib/{apt,dpkg,cache,log}
