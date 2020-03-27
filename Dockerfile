@@ -1,4 +1,5 @@
 FROM debian:buster-20200224-slim
+ENV DEBIAN_FRONTEND noninteractive
 ARG OPENJDK_VERSION=242
 ARG OPENJDK_SUBVERSION=b08
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
