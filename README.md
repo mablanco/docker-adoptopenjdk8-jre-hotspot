@@ -24,4 +24,4 @@ In order to run a Java application, mount the application folder and add the ful
 
 You can use any JVM argument as long as you mount into the container the folder that hosts the files the JVM is going to work on.
 
-**Note:** Keep in mind that this image won't run applications that need a graphical interface out of the box. You'll need extra tweaks for that. have a look at <https://github.com/mablanco/docker-vassal> for an example on how to achive this easily.
+**Note:** Keep in mind that this image won't run applications that need a graphical interface out of the box. You'll need extra tweaks for that. Have a look at <https://github.com/mablanco/docker-vassal> for an example on how to achive this easily.
