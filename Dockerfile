@@ -1,6 +1,6 @@
 FROM debian:buster-20200224-slim
-ARG OPENJDK_VERSION=222
-ARG OPENJDK_SUBVERSION=b10
+ARG OPENJDK_VERSION=242
+ARG OPENJDK_SUBVERSION=b08
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -yu dist-upgrade && \
