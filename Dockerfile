@@ -1,7 +1,7 @@
 FROM debian:buster-20200607-slim
 ENV DEBIAN_FRONTEND noninteractive
-ARG OPENJDK_VERSION=242
-ARG OPENJDK_SUBVERSION=b08
+ARG OPENJDK_VERSION=252
+ARG OPENJDK_SUBVERSION=b09
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -yqu dist-upgrade && \
