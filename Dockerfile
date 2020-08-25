@@ -1,7 +1,7 @@
 FROM debian:buster-20200803-slim
 ENV DEBIAN_FRONTEND noninteractive
-ARG OPENJDK_VERSION=252
-ARG OPENJDK_SUBVERSION=b09
+ARG OPENJDK_VERSION=265
+ARG OPENJDK_SUBVERSION=b01
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -qq dist-upgrade && \
