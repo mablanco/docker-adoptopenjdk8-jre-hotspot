@@ -25,3 +25,13 @@ In order to run a Java application, mount the application folder and add the ful
 You can use any JVM argument as long as you mount into the container the folder that hosts the files the JVM is going to work on.
 
 **Note:** Keep in mind that this image won't run applications that need a graphical interface out of the box. You'll need extra tweaks for that. Have a look at <https://github.com/mablanco/docker-vassal> for an example on how to achive this easily.
+
+## Building the image
+
+Use the following command to build the image with the `latest` tag and the AdoptOpenJDK 8 JRE version specified in the Dockerfile:
+
+    $ docker build -t mablanco/adoptopenjdk8-jre-hotspot .
+
+In case you want to build a different version, browse the available releases at <https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot> and then use this command:
+
+    $ docker build --build-arg OPENJDK_VERSION=<version> --build-arg OPENJDK_SUBVERSION=<subversion> -t mablanco/adoptopenjdk8-jre-hotspot:<version>-<subversion> .
