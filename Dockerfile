@@ -1,6 +1,6 @@
 FROM debian:buster-20201117-slim
 ENV DEBIAN_FRONTEND noninteractive
-ARG OPENJDK_VERSION=265
+ARG OPENJDK_VERSION=275
 ARG OPENJDK_SUBVERSION=b01
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 RUN apt-get update && \
