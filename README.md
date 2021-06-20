@@ -16,11 +16,11 @@ However, nothing prevents it from being used as a CLI standalone tool, as explai
 
 Launching a container without parameters will run the JVM and show its version:
 
-    $ docker run -it --rm mablanco/adoptopenjdk8-hotspot
+    $ docker run -it --rm mablanco/adoptopenjdk8-jre-hotspot
 
 In order to run a Java application, mount the application folder and add the full java command:
 
-    $ docker run -it --rm -v <java_app_folder>:/app mablanco/adoptopenjdk8-hotspot java -jar application.jar
+    $ docker run -it --rm -v <java_app_folder>:/app mablanco/adoptopenjdk8-jre-hotspot java -jar application.jar
 
 You can use any JVM argument as long as you mount into the container the folder that hosts the files the JVM is going to work on.
 
