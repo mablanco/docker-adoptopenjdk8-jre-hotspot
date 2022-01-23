@@ -1,8 +1,8 @@
 # docker-adoptopenjdk8-jre-hotspot
 
-Docker image for AdoptOpenJDK 8 JRE, a project that produces prebuilt binaries from OpenJDK class libraries and a choice of either the OpenJDK HotSpot o Eclipse OpenJ9 VM (<https://adoptopenjdk.net/>).
+Docker image for AdoptOpenJDK 8 JRE, a project that produces prebuilt binaries from OpenJDK class libraries and a choice of either the OpenJDK HotSpot o Eclipse OpenJ9 VM (<https://adoptopenjdk.net/>). Since July 2021, this project was rebranded as Temurin but this image will keep the AdoptOpenJDK name in order to ensure compatibility with deployments of previous versions.
 
-This image is built upon Debian Buster slim image. It offers OpenJDK 8 (LTS) with HotSpot JRE. It's a good choice for running Java applications on modern Linux distros that don't support old OpenJDK versions.
+This image is built upon Debian Bullseye slim image. It offers OpenJDK 8 (LTS) with HotSpot JRE. It's a good choice for running Java applications on modern Linux distros that don't support old OpenJDK versions.
 
 ## How to use this image
 
