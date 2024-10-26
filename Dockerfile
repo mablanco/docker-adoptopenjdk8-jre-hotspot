@@ -1,5 +1,5 @@
 FROM debian:bullseye-20241016-slim
-ARG DEBIAN_FRONTEND noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
 ARG OPENJDK_VERSION=432
 ARG OPENJDK_SUBVERSION=b06
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
