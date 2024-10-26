@@ -1,7 +1,7 @@
-FROM debian:bullseye-20211220-slim
-ENV DEBIAN_FRONTEND noninteractive
-ARG OPENJDK_VERSION=312
-ARG OPENJDK_SUBVERSION=b07
+FROM debian:bullseye-20241016-slim
+ARG DEBIAN_FRONTEND noninteractive
+ARG OPENJDK_VERSION=432
+ARG OPENJDK_SUBVERSION=b06
 RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get -yqu dist-upgrade && \
