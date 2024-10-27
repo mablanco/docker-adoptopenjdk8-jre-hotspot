@@ -2,8 +2,8 @@ FROM debian:bullseye-20241016-slim
 ARG DEBIAN_FRONTEND=noninteractive
 ARG OPENJDK_VERSION=432
 ARG OPENJDK_SUBVERSION=b06
-RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list
-RUN apt-get update && \
+RUN sed -i 's/main/main contrib non-free/' /etc/apt/sources.list && \
+    apt-get update && \
     apt-get -yqu dist-upgrade && \
     apt-get -yq install wget && \
     wget -q https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u$OPENJDK_VERSION-$OPENJDK_SUBVERSION/OpenJDK8U-jre_x64_linux_hotspot_8u$OPENJDK_VERSION$OPENJDK_SUBVERSION.tar.gz && \
