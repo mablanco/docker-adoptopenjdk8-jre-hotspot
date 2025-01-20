@@ -1,4 +1,4 @@
-FROM debian:bullseye-20241016-slim
+FROM debian:bullseye-20250113-slim
 ARG DEBIAN_FRONTEND=noninteractive
 ARG OPENJDK_VERSION=432
 ARG OPENJDK_SUBVERSION=b06
