@@ -16,11 +16,15 @@ However, nothing prevents it from being used as a CLI standalone tool, as explai
 
 Launching a container without parameters will run the JVM and show its version:
 
-    $ docker run -it --rm mablanco/adoptopenjdk8-jre-hotspot
+```bash
+~ docker run -it --rm mablanco/adoptopenjdk8-jre-hotspot
+```
 
 In order to run a Java application, mount the application folder and add the full java command:
 
-    $ docker run -it --rm -v <java_app_folder>:/app mablanco/adoptopenjdk8-jre-hotspot java -jar application.jar
+```bash
+~ docker run -it --rm -v <java_app_folder>:/app mablanco/adoptopenjdk8-jre-hotspot java -jar application.jar
+```
 
 You can use any JVM argument as long as you mount into the container the folder that hosts the files the JVM is going to work on.
 
@@ -30,8 +34,12 @@ You can use any JVM argument as long as you mount into the container the folder 
 
 Use the following command to build the image with the `latest` tag and the AdoptOpenJDK 8 JRE version specified in the Dockerfile:
 
-    $ docker build -t mablanco/adoptopenjdk8-jre-hotspot .
+```bash
+~ docker build -t mablanco/adoptopenjdk8-jre-hotspot .
+```
 
 In case you want to build a different version, browse the available releases at <https://adoptopenjdk.net/archive.html?variant=openjdk8&jvmVariant=hotspot> and then use this command:
 
-    $ docker build --build-arg OPENJDK_VERSION=<version> --build-arg OPENJDK_SUBVERSION=<subversion> -t mablanco/adoptopenjdk8-jre-hotspot:<version>-<subversion> .
+```bash
+~ docker build --build-arg OPENJDK_VERSION=<version> --build-arg OPENJDK_SUBVERSION=<subversion> -t mablanco/adoptopenjdk8-jre-hotspot:<version>-<subversion> .
+```
