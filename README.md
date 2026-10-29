@@ -1,5 +1,15 @@
 # docker-adoptopenjdk8-jre-hotspot
 
+> **DEPRECATED:** this image is no longer maintained and will not receive updates. The last published tag is `432-b06-20250120`, which ships an outdated JRE on Debian Bullseye (end of life). Use the official [`eclipse-temurin`](https://hub.docker.com/_/eclipse-temurin) image instead: it is maintained by the Adoptium project, rebuilt for every security release and published for several architectures.
+>
+> Migrating usually means changing only the `FROM` line, since `java` is on the `PATH` in both images:
+>
+> ```dockerfile
+> FROM eclipse-temurin:8-jre
+> ```
+>
+> Pin an exact release (for example `eclipse-temurin:8u504-b01-jre`) if you need reproducible builds.
+
 Docker image for AdoptOpenJDK 8 JRE, a project that produces prebuilt binaries from OpenJDK class libraries and a choice of either the OpenJDK HotSpot o Eclipse OpenJ9 VM (<https://adoptopenjdk.net/>). Since July 2021, this project was rebranded as Temurin but this image will keep the AdoptOpenJDK name in order to ensure compatibility with deployments of previous versions.
 
 This image is built upon Debian Bullseye slim image. It offers OpenJDK 8 (LTS) with HotSpot JRE. It's a good choice for running Java applications on modern Linux distros that don't support old OpenJDK versions.
